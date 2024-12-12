@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-app.min.js"></script>
+<!--TODO: Add SDKs for Firebase products that you want to use. https://cdnout.com/cdn/firebase@8.2.2-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-analytics.min.js"></script>
+<!--**** Remember to add the database script ***-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.2.2/firebase-database.min.js"></script>
+<!--Your web app's Firebase configuration-->
+<script src="./config.js"></script>
+<script src="./index.js"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<div class="container">
+    <!-- Login Section -->
+    <div id="login-section">
+        <h2>Enter Chat</h2>
+        <div class="login-form">
+            <input type="text" id="username" placeholder="Enter your username">
+            <button id="login-btn">Join Chat</button>
+        </div>
+    </div>
+
+    <!-- Chat Section (Initially Hidden) -->
+    <div id="chat-section" class="hidden">
+        <!-- Online Users Panel -->
+        <div class="online-users-panel">
+            <h3>Online Users</h3>
+            <div id="online-users-list">
+                <!-- Users will be added here dynamically -->
+            </div>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area">
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be added here dynamically -->
+            </div>
+            
+            <!-- Message Input -->
+            <div class="message-input">
+                <input type="text" id="message-text" placeholder="Type your message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
